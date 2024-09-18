@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+ /** @type {Config} */ 
+/** @typedef {import('tailwindcss').Config} Config */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,11 +9,16 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+        roboto: ['var(--font-roboto)'],
+        outfit: ['var(--font-outfit)'],
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require('@tailwindcss/aspect-ratio')],
+};
