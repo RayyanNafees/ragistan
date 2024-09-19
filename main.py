@@ -18,6 +18,7 @@ app = Flask(__name__,
 
 CORS(app)
 
+
 app.config["UPLOAD_FOLDER"] = "uploads"
 
 app.register_blueprint(rag, url_prefix='/api')
@@ -25,6 +26,8 @@ app.register_blueprint(rag, url_prefix='/api')
 
 @app.route('/')
 def index():
+    print('Template folder:', app.template_folder)
+    print(os.listdir(app.template_folder))
     return render_template('index.html')
 
 @app.route('/<path:path>')
