@@ -1,6 +1,4 @@
 import Image from "next/image";
-import User from "../../../public/user.png";
-import Water from "../../../public/water-icon.png";
 
 const Chat = ({ isUser, userPrompt = "", message = "", loading = false }) => {
 	const createMarkup = (htmlString) => {
@@ -11,7 +9,7 @@ const Chat = ({ isUser, userPrompt = "", message = "", loading = false }) => {
 			{isUser ? (
 				<div className="flex gap-5 justify-start items-center pt-5 text-slate-100 font-roboto">
 					<Image
-						src={User}
+						src={'/user.png'}
 						className="m-4"
 						alt="user-profile-image"
 						width={35}
@@ -22,7 +20,7 @@ const Chat = ({ isUser, userPrompt = "", message = "", loading = false }) => {
 			) : (
 				<div className="flex items-center justify-start gap-5 font-roboto mt-5 font-medium tracking-[0.04rem]">
 					<Image
-						src={Water}
+						src={'/water-icon.png'}
 						alt="logo"
 						className="m-4"
 						width={35}
