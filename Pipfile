@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+chromadb = "==0.5.3"
+flask = "==3.0.3"
+flask-cors = "==4.0.0"
+langchain = "*"
+langchain-chroma = "*"
+langchain-community = "*"
+langchain-core = "*"
+langchain-google-genai = "==1.0.3"
+langchain-text-splitters = "*"
+pypdf = "==4.2.0"
+requests = "==2.31.0"
+werkzeug = "==3.0.2"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
