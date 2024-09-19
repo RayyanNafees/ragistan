@@ -28,6 +28,7 @@ const Chat = ({ isUser, userPrompt = "", message = "", loading = false }) => {
 					/>
 					<div
 						className="flex flex-col items-start"
+						// biome-ignore lint/security/noDangerouslySetInnerHtml: Needed for the RAG
 						dangerouslySetInnerHTML={createMarkup(message)}
 				 />
 				</div>
