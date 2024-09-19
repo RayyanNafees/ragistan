@@ -1,4 +1,4 @@
-import "../../app/globals.css";
+import "../style.css";
 
 const Loader = () => {
 	return (

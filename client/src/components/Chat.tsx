@@ -1,17 +1,17 @@
-import Image from "next/image";
-
+import user from '../assets/user.png'
+import water from '../assets/water-icon.png'
 const Chat = ({ isUser, userPrompt = "", message = "", loading = false }) => {
-	const createMarkup = (htmlString) => {
+	const createMarkup = (htmlString: string) => {
 		return { __html: htmlString };
 	};
 	return (
 		<>
 			{isUser ? (
 				<div className="flex gap-5 justify-start items-center pt-5 text-slate-100 font-roboto">
-					<Image
-						src={'/user.png'}
+					<img
+						src={user}
 						className="m-4"
-						alt="user-profile-image"
+						alt="user-profile-img"
 						width={35}
 						height={35}
 					/>
@@ -19,8 +19,8 @@ const Chat = ({ isUser, userPrompt = "", message = "", loading = false }) => {
 				</div>
 			) : (
 				<div className="flex items-center justify-start gap-5 font-roboto mt-5 font-medium tracking-[0.04rem]">
-					<Image
-						src={'/water-icon.png'}
+					<img
+						src={water}
 						alt="logo"
 						className="m-4"
 						width={35}

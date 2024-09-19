@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import Loader from "./Loader";
 import Chat from "./Chat";
@@ -14,7 +13,7 @@ function ChatBot({ filePath }) {
 	const chat = async () => {
 		setLoading(true);
 		try {
-			const res = await fetch("http://127.0.0.1:5000/ask", {
+			const res = await fetch("/api/ask", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -114,7 +113,7 @@ function ChatBot({ filePath }) {
 							<h3 className="font-semibold  text-[2rem]">
 								You can upload any PDF and ask question from it.
 							</h3>
-							<p>Your chats will apear here!</p>
+							<p>Your chats will appear here!</p>
 						</div>
 					</div>
 				)}

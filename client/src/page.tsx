@@ -1,8 +1,7 @@
-"use client";
-
-import { useState } from "react";
+import water from './assets/water-icon.png'
+import { useState } from "preact/hooks";
+import type React from 'preact/compat'
 import ChatBot from "./components/Chatbot";
-import Image from "next/image";
 export default function Home() {
 	const [file, setFile] = useState<File>();
 	const [filePath, setFilePath] = useState(null);
@@ -20,7 +19,7 @@ export default function Home() {
 		}
 	};
 
-	const handleSubmit: React.MouseEventHandler<HTMLButtonElement> = async (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault();
 		setLoading(true);
 		if (file) {
@@ -54,11 +53,8 @@ export default function Home() {
 	return (
 		<div className="flex">
 			<main className="flex min-h-screen w-[50vw] flex-col items-center justify-center bg-slate-900">
-				{/* <h1 className="font-bold font-outfit text-[2rem] absolute top-5 left-5 gradient-text">
-          TahaAI
-        </h1> */}
-				<Image
-					src={'/water-icon.png'}
+				<img
+					src={water}
 					alt="logo"
 					className="absolute top-0 left-5 m-4 rounded-full"
 					width={50}
