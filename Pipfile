@@ -16,6 +16,7 @@ langchain-text-splitters = "*"
 pypdf = "==4.2.0"
 requests = "==2.31.0"
 werkzeug = "==3.0.2"
+gunicorn = "*"
 
 [dev-packages]
 

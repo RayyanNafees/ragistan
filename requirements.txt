@@ -10,3 +10,4 @@ langchain-text-splitters
 pypdf==4.2.0
 requests==2.31.0
 Werkzeug==3.0.2
+gunicorn==23.0.0
